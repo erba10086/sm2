@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zjrc.sm2.dao.SM2Dao" >
+    <select id="selectByIp" parameterType="string" resultType="com.zjrc.sm2.entity.IpWhite">
+        select * from ip_white where ip = #{ip}
+    </select>
+    
+    <insert id="insertIp" parameterType="string">
+        insert into ip_white(ip) values (#{ip})
+    </insert>
+</mapper>
